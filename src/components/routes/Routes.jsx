@@ -1,10 +1,10 @@
 import React from 'react';
-import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { MoviesList } from "../movies-list/MoviesList";
 import { PageNotFound } from '../page-not-found/PageNotFound';
 
 export const RoutePaths = () => (
-    <BrowserRouter>
+
         <Routes>
             <Route exact path="/" element={<MoviesList />} />
             <Route
@@ -17,5 +17,5 @@ export const RoutePaths = () => (
                 element={<Navigate to="/404" replace />}
             />
         </Routes>
-    </BrowserRouter>
+
 );
