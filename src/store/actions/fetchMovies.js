@@ -1,16 +1,16 @@
 import {
-  FETCH_MOVIES_LOADED,
-  FETCH_MOVIES_ERROR,
-} from './actionTypes';
+  LOADED,
+  ERROR,
+} from './types';
 import { BASE_URL } from '../constants';
 
 const fetchDataLoaded = (payload) => ({
-  type: FETCH_MOVIES_LOADED,
+  type: LOADED,
   payload,
 });
 
 const fetchDataError = () => ({
-  type: FETCH_MOVIES_ERROR,
+  type: ERROR,
 });
 
 const fetchMovies = () => (

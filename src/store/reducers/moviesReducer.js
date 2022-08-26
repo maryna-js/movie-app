@@ -1,8 +1,8 @@
 import {
-  FETCH_MOVIES_LOADING,
-  FETCH_MOVIES_LOADED,
-  FETCH_MOVIES_ERROR,
-} from '../actions/actionTypes';
+  LOADING,
+  LOADED,
+  ERROR,
+} from '../actions/types';
 
 const initialState = {
   movies: [],
@@ -12,20 +12,20 @@ const initialState = {
 
 const moviesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_MOVIES_LOADING:
+    case LOADING:
       return {
         ...state,
         error: false,
         isLoading: true,
       };
-    case FETCH_MOVIES_LOADED:
+    case LOADED:
       return {
         ...state,
         isLoading: false,
         movies: action.payload.data,
         error: !action.payload.data.length,
       };
-    case FETCH_MOVIES_ERROR:
+    case ERROR:
       return {
         ...state,
         error: true,

@@ -15,15 +15,17 @@ export const MovieCard = ({
     setIsActive((state) => !state)
   }
   return (
-    <div key={id} className={`flex flex-col items-start border rounded w-full h-full my-4 ${isActive ? 'h-72' : 'h-32'}`}>
+    <div
+        key={id}
+        className={`flex flex-col items-start border rounded w-full h-full my-4 ${isActive ? 'h-72' : 'h-32'}`}>
       <div className="flex flex-col md:flex-row justify-between items-center w-full">
-        <div className="flex w-1/2">
-        <img className="w-20 h-32 object-cover" src={poster} alt={title} />
-          <div className="flex flex-col pl-7 pt-6">
-            <h2 className="font-bold text-lg text-blue-800">{title}</h2>
-            <div className="text-blue-700 font-light text-sm pt-2">{type}</div>
-            <div className="text-blue-600 font-light text-xs pt-2">{year}</div>
-          </div>
+        <div className="flex flex-col md:flex-row w-full md:w-1/2">
+          <img className="w-20 h-32 object-cover" src={poster} alt={title} />
+            <div className="flex flex-col pl-7 pt-6">
+              <h2 className="font-bold text-lg text-blue-800">{title}</h2>
+              <div className="text-blue-700 font-light text-sm pt-2">{type}</div>
+              <div className="text-blue-600 font-light text-xs pt-2">{year}</div>
+            </div>
         </div>
         <div className="w-64 flex items-center justify-center p-4">
           <div className="mx-2"><LikeIcon /></div>
@@ -31,7 +33,7 @@ export const MovieCard = ({
           <div className="ml-8"><StarIcon /></div>
           <div className="text-lg font-medium text-blue-700 pl-4 ">4.30</div>
         </div>
-        <button className="text-blue-900 font-bold text-lg mr-6" onClick={toggleCollapse}>
+        <button data-testid='collapse' className="text-blue-900 font-bold text-lg mr-6" onClick={toggleCollapse}>
           {isActive ? '-' : '+'}
         </button>
       </div>
@@ -51,5 +53,5 @@ MovieCard.propTypes = {
   type: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
   poster: PropTypes.string,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };

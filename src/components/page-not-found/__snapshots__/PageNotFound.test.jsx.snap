@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageNotFound Should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-gray-200 flex w-full h-screen flex-col justify-center items-center"
+  >
+    <div
+      class="font-normal text-3xl text-blue-900"
+    >
+      Page Not Found
+    </div>
+    <div
+      class="text-6xl text-blue-900 drop-shadow my-4"
+    >
+      404
+    </div>
+    <a
+      href="/"
+    >
+      <button
+        class="text-gray-800 text-uppercase text-base"
+      >
+        GO BACK TO HOME
+      </button>
+    </a>
+  </div>
+</DocumentFragment>
+`;

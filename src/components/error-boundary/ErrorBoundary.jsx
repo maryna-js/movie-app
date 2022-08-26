@@ -18,7 +18,7 @@ export class ErrorBoundary extends React.PureComponent {
     const { children } = this.props;
     const { hasError } = this.state;
     return hasError ? (
-      <h2 style={{ flexGrow: 1, textAlign: 'center' }}>Something went wrong</h2>
+      <h2 className="flex flex-center items-center">Something went wrong</h2>
     ) : (
       children
     );
