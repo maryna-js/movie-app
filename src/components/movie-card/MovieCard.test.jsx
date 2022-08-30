@@ -24,9 +24,10 @@ describe('MovieCard', () => {
     expect(getComponent({}).asFragment()).toMatchSnapshot();
   });
   it('Should call toggleCollapse', () => {
-    const toggleCollapse = jest.fn();
-    const { getByTestId } = getComponent({});
-    fireEvent.click(getByTestId('collapse'));
-    expect(toggleCollapse).toHaveBeenCalled();
+      const { getByTestId, getByText } = getComponent({});
+      expect(getByText('+')).toBeTruthy();
+      fireEvent.click(getByTestId('collapse'));
+      expect(getByText('-')).toBeTruthy();
+      expect(getByTestId('collapse-open')).toBeTruthy();
   });
 });

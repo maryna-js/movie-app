@@ -9,13 +9,13 @@ exports[`App Should render main page 1`] = `
       class="border shadow-xl rounded-lg w-11/12 h-full p-4 m-4"
     >
       <div
-        class="flex flex-col items-start border rounded w-full h-full my-4 h-32"
+        class="flex flex-col items-start border rounded w-full h-full my-4 h-auto md:h-32"
       >
         <div
           class="flex flex-col md:flex-row justify-between items-center w-full"
         >
           <div
-            class="flex flex-col md:flex-row w-full md:w-1/2"
+            class="flex w-full md:w-1/2"
           >
             <img
               alt="Star Wars"
