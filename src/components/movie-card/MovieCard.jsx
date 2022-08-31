@@ -17,7 +17,6 @@ export const MovieCard = ({
   }
   return (
     <div
-        key={id}
         className={`flex flex-col items-start border rounded w-full h-full my-4 h-auto ${isActive ? 'md:h-72' : 'md:h-36'}`}>
       <div className="flex flex-col md:flex-row justify-between items-center w-full relative">
         <div className="flex w-full md:w-1/2">

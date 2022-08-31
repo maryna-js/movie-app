@@ -1,29 +1,27 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { ErrorBoundary } from './ErrorBoundary';
 
 describe('Error Boundary', () => {
-  const Child = () => {
-    throw new Error();
-  };
+
   it(`should render error boundary`, () => {
-    const getComponent = () =>
       render(
         <ErrorBoundary>
           <div>test error</div>
         </ErrorBoundary>
       );
-    const { getByText } = getComponent({});
-    expect(getByText('test error')).toBeTruthy();
+    expect(screen.getByText(/test error/i)).toBeTruthy();
   });
   it(`should render error boundary with error`, () => {
-    const getComponent = () =>
+      const Child = () => {
+          throw new Error();
+      };
+      console.error = jest.fn();
       render(
         <ErrorBoundary>
           <Child />
         </ErrorBoundary>
       );
-    const { getByText } = getComponent({});
-    expect(getByText('Something went wrong')).toBeTruthy();
+    expect(screen.getByText(/something went wrong/i)).toMatchSnapshot();
   });
 });

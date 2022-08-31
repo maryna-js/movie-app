@@ -33,6 +33,7 @@ export const MoviesList = () => {
                         title={Title}
                         year={Year}
                         id={imdbID}
+                        key={imdbID}
                     />
                 ))}
             </div>

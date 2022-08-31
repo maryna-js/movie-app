@@ -51,11 +51,9 @@ exports[`App Should render main page 1`] = `
             <div
               class="mx-2"
             >
-              <svg
+              <div
                 class="w-4 md:w-8"
-              >
-                heart.svg
-              </svg>
+              />
             </div>
             <div
               class="text-sm md:text-lg font-medium text-blue-700 pl-2 md:pl-4"
@@ -65,11 +63,9 @@ exports[`App Should render main page 1`] = `
             <div
               class="ml-4 md:ml-8"
             >
-              <svg
+              <div
                 class="w-4 md:w-8"
-              >
-                star.svg
-              </svg>
+              />
             </div>
             <div
               class="text-sm md:text-lg font-medium text-blue-700 pl-2 md:pl-4 "
