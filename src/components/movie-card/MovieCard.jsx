@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { ReactComponent as LikeIcon } from '../../icons/heart.svg';
 import { ReactComponent as StarIcon } from '../../icons/star.svg';
@@ -22,7 +23,9 @@ export const MovieCard = ({
         <div className="flex w-full md:w-1/2">
           <img className="w-20 md:w-24 h-32 md:h-36 object-cover" src={poster} alt={title} />
             <div className="flex flex-col px-5 md:pl-7 pt-4 md:pt-6">
+              <Link to ={`/movie/${id}`}>
               <h2 className="font-bold text-base md:text-lg text-blue-800 h-12 md:h-14 overflow-hidden">{title}</h2>
+                </Link>
               <div className="text-blue-700 font-light text-sm pt-2">{type}</div>
               <div className="text-blue-600 font-light text-xs pt-2">{year}</div>
             </div>

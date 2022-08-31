@@ -1,5 +1,5 @@
 import moviesReducer from '../moviesReducer';
-import * as types from '../../actions/types';
+import * as types from '../../types/movies';
 
 describe('movies reducer', () => {
   const initialState = {

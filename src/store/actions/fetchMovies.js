@@ -1,7 +1,7 @@
 import {
   LOADED,
   ERROR,
-} from './types';
+} from '../types/movies';
 import { BASE_URL } from '../constants';
 
 const fetchDataLoaded = (payload) => ({

@@ -2,33 +2,31 @@ import {
   LOADING,
   LOADED,
   ERROR,
-} from '../types/movies';
+} from '../types/movie';
 
 const initialState = {
-  movies: [],
-  error: false,
+  movie: {},
+  error: null,
   isLoading: false,
 };
 
-const moviesReducer = (state = initialState, action) => {
+const movieReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOADING:
       return {
         ...state,
-        error: false,
         isLoading: true,
       };
     case LOADED:
       return {
         ...state,
         isLoading: false,
-        movies: action.payload.data,
-        error: !action.payload.data.length,
+        movie: action.payload,
       };
     case ERROR:
       return {
         ...state,
-        error: true,
+        error: action.payload,
         isLoading: false,
       };
     default:
@@ -36,4 +34,4 @@ const moviesReducer = (state = initialState, action) => {
   }
 };
 
-export default moviesReducer;
+export default movieReducer;
