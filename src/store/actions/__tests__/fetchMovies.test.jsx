@@ -1,7 +1,7 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
-import * as types from '../types';
+import * as types from '../../types/movies';
 import { BASE_URL } from '../../constants';
 import movies from '../../../__mocks__/mockMovies.json';
 import fetchMovies from '../fetchMovies';
@@ -16,7 +16,7 @@ describe('fetchMovies', () => {
     });
     it('should create LOADED if fetched', () => {
         fetchMock.getOnce(
-            BASE_URL,
+            `${BASE_URL}&s=star&page=1`,
             {
                 headers: { 'content-type': 'application/json' },
                 body: { data: movies.Search },
@@ -35,7 +35,7 @@ describe('fetchMovies', () => {
     });
     it('should create ERROR if error', () => {
         fetchMock.getOnce(
-            BASE_URL,
+            `${BASE_URL}&s=star&page=1`,
             {
                 headers: { 'content-type': 'application/json' },
                 throws: new TypeError('Error'),

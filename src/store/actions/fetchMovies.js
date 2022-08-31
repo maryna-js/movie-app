@@ -16,7 +16,7 @@ const fetchDataError = () => ({
 const fetchMovies = () => (
   dispatch
 ) => {
-  return fetch(BASE_URL)
+  return fetch(`${BASE_URL}&s=star&page=1`)
     .then((res) => res.json())
       .then((movies) =>
           dispatch(fetchDataLoaded({ data: movies.Search }))

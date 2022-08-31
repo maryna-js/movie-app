@@ -1,7 +1,7 @@
 import moviesReducer from '../moviesReducer';
 import * as types from '../../types/movies';
 
-describe('movies reducer', () => {
+describe('fetch movies reducer', () => {
   const initialState = {
     movies: [],
     error: false,

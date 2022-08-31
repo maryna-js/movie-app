@@ -3,27 +3,31 @@
 exports[`MovieCard Should render component 1`] = `
 <DocumentFragment>
   <div
-    class="flex flex-col items-start border rounded w-full h-full my-4 h-auto md:h-32"
+    class="flex flex-col items-start border rounded w-full h-full my-4 h-auto md:h-36"
   >
     <div
-      class="flex flex-col md:flex-row justify-between items-center w-full"
+      class="flex flex-col md:flex-row justify-between items-center w-full relative"
     >
       <div
         class="flex w-full md:w-1/2"
       >
         <img
           alt="Sherlock Holmes"
-          class="w-20 h-32 object-cover"
+          class="w-20 md:w-24 h-32 md:h-36 object-cover"
           src="https://m.media-amazon.com/images/M/MV5BNzg4MjQxNTQtZmI5My00YjMwLWJlMjUtMmJlY2U2ZWFlNzY1XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg"
         />
         <div
-          class="flex flex-col pl-7 pt-6"
+          class="flex flex-col px-5 md:pl-7 pt-4 md:pt-6"
         >
-          <h2
-            class="font-bold text-lg text-blue-800"
+          <a
+            href="/movie/1"
           >
-            Sherlock Holmes
-          </h2>
+            <h2
+              class="font-bold text-base md:text-lg text-blue-800 h-12 md:h-14 overflow-hidden"
+            >
+              Sherlock Holmes
+            </h2>
+          </a>
           <div
             class="text-blue-700 font-light text-sm pt-2"
           >
@@ -37,31 +41,35 @@ exports[`MovieCard Should render component 1`] = `
         </div>
       </div>
       <div
-        class="w-64 flex items-center justify-center p-4"
+        class="w-full md:w-64 flex items-center justify-start md:justify-center px-1 py-2 md:p-4"
       >
         <div
           class="mx-2"
         >
-          <div />
+          <div
+            class="w-4 md:w-8"
+          />
         </div>
         <div
-          class="text-lg font-medium text-blue-700 pl-4"
+          class="text-sm md:text-lg font-medium text-blue-700 pl-2 md:pl-4"
         >
           5.8 k
         </div>
         <div
-          class="ml-8"
+          class="ml-4 md:ml-8"
         >
-          <div />
+          <div
+            class="w-4 md:w-8"
+          />
         </div>
         <div
-          class="text-lg font-medium text-blue-700 pl-4 "
+          class="text-sm md:text-lg font-medium text-blue-700 pl-2 md:pl-4 "
         >
           4.30
         </div>
       </div>
       <button
-        class="text-blue-900 font-bold text-lg mr-6"
+        class="text-blue-900 font-bold text-lg mr-6 absolute md:relative right-4 md:right-0 top-20 md:top-0"
         data-testid="collapse"
       >
         +

@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import { fireEvent, render } from '@testing-library/react';
 import { MovieCard } from './MovieCard';
@@ -18,7 +19,7 @@ describe('MovieCard', () => {
           year={year}
           id={id}
           poster={poster}
-      />
+      />, {wrapper: MemoryRouter}
     );
   it('Should render component', () => {
     expect(getComponent({}).asFragment()).toMatchSnapshot();
